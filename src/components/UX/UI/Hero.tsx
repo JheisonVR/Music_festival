@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { LuAudioLines } from "react-icons/lu";
+// import { LuAudioLines } from "react-icons/lu";
+import { DynamicLogo } from './DynamicLogo';
 
 
 export const Hero = () => {
@@ -13,15 +14,18 @@ export const Hero = () => {
             className='object-contain object-center -z-10'
             priority
         />
-        <div className='bg-white/30 py-2 px-4 rounded-xl text-center backdrop-blur-md'>
-          <div className='relative flex items-center justify-center'>
+        <div className='bg-white/30 py-3 px-4 rounded-xl text-center backdrop-blur-md'>
+          {/* <div className='relative flex items-center justify-center'>
             <LuAudioLines size={100} color='#FA3086'/>
+          </div> */}
+          <div className='relative flex items-center justify-center' >
+            <DynamicLogo/>
           </div>
           <div className='text-5xl font-bold'>
             <p className='text-black' >Playlist</p>
           </div>
         </div>
-        <div className='font-bold text-sm mt-3 text-black/80' >
+        <div className='bg-white/60 font-bold text-sm mt-3 text-black/80' >
           Keep me updated with the news and promotions
         </div>
         <div className='mt-3 flex gap-2'>
