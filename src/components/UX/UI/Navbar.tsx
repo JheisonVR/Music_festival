@@ -45,7 +45,7 @@ export const Navbar = () => {
     };
 
   return (
-    <nav className="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500 ">
+    <nav className="sticky flex top-0 bg-gradient-to-r from-rose-500 to-pink-500 z-20 rounded-b-sm ">
       {/* Logo */}
       <div className="flex items-center gap-1">
         <Link href="/">

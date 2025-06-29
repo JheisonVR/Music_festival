@@ -11,6 +11,16 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --animate-wavey: wavey 1000ms linear infinite;
+  --animation-delay-100: 100ms;
+  --animation-delay-200: 200ms;
+  --animation-delay-300: 300ms;
+  --animation-delay-400: 400ms;
+  --animation-delay-500: 500ms;
+  --animation-delay-600: 600ms;
+  --animation-delay-700: 700ms;
+  --animation-delay-800: 800ms;
+  --animation-delay-900: 900ms;
+  --animation-delay-1000: 1000ms;
 
   @keyframes wavey {
     0%, 100%{
@@ -23,6 +33,11 @@
   }
 }
 
+@utility animation-delay-* {
+  animation-delay: --value(animation-delay-*);
+  animation-delay: --value([*]);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -30,14 +45,45 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h1{
+    @apply text-6xl font-bold
+  }
+  h2{
+    @apply text-5xl font-bold
+  }
+  h3{
+    @apply text-4xl font-bold
+  }
+  h4{
+    @apply text-3xl font-bold
+  }
+  h5{
+    @apply text-2xl font-bold
+  }
+  h6{
+    @apply text-xl font-bold
+  }
+  
 }
 
 @custom-variant group-open {
   &:is(:where(.group):is(.open, [open], :popover-open, :open) *) {
     @slot;
   }
+}
+
+.hide-scrollbar{
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar{
+  display: none;
 }

@@ -25,16 +25,16 @@ export const Hero = () => {
             <p className='text-black' >Playlist</p>
           </div>
         </div>
-        <div className='bg-white/60 font-bold text-sm mt-3 text-black/80' >
-          Keep me updated with the news and promotions
+        <div className='bg-white/50 font-bold text-sm mt-3 text-black/80 p-2 rounded-3xl' >
+          <h6>Keep me updated with the news and promotions</h6>
         </div>
-        <div className='mt-3 flex gap-2'>
+        <div className='mt-3 flex gap-3'>
           <input
             type='email'
             placeholder='Email'
-            className='rounded-sm border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-600 placeholder-zinc-500 caret-pink-500 outline-pink-500'
+            className='rounded-xl border-white/40 bg-white/30 backdrop-blur-md p-2 font-bold text-sky-600 placeholder-zinc-500 caret-pink-500 outline-pink-500'
           />
-          <button className='cursor-pointer rounded-sm bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-950 hover:shadow-lg hover:shadow-black/20' type='submit' >
+          <button className='cursor-pointer rounded-xl bg-pink-500 py-2 px-4 font-bold transition-colors hover:bg-sky-950 hover:shadow-lg hover:shadow-black/20 ' type='submit' >
             Subscribe
           </button>
 
